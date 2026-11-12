@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IENN · Cumpleaños</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600;1,9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFF6F9; --card:#FFFFFF; --ink:#3A1C35; --muted:#8C6F86; --line:#F5DCE6;
+  --pink:#DD4B85; --pink-d:#C23A72; --pink-soft:#FDE5EF;
+  --mint:#20897A; --mint-l:#9FE3D3; --mint-soft:#DDF4EF;
+  --gold:#F2B23E; --gold-soft:#FFF2D8; --lilac:#B7A3EE; --danger:#C0352B;
+  --r:20px; --shadow:0 1px 2px rgba(58,28,53,.05),0 12px 32px rgba(221,75,133,.09);
+  --sprinkles:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cg opacity='.32'%3E%3Crect x='18' y='26' width='16' height='5' rx='2.5' fill='%23DD4B85' transform='rotate(32 26 28)'/%3E%3Crect x='92' y='14' width='16' height='5' rx='2.5' fill='%239FE3D3' transform='rotate(-24 100 16)'/%3E%3Crect x='168' y='40' width='16' height='5' rx='2.5' fill='%23F2B23E' transform='rotate(70 176 42)'/%3E%3Crect x='54' y='92' width='16' height='5' rx='2.5' fill='%23B7A3EE' transform='rotate(-50 62 94)'/%3E%3Crect x='132' y='104' width='16' height='5' rx='2.5' fill='%23DD4B85' transform='rotate(12 140 106)'/%3E%3Crect x='190' y='150' width='16' height='5' rx='2.5' fill='%239FE3D3' transform='rotate(40 198 152)'/%3E%3Crect x='24' y='170' width='16' height='5' rx='2.5' fill='%23F2B23E' transform='rotate(-18 32 172)'/%3E%3Crect x='104' y='186' width='16' height='5' rx='2.5' fill='%23B7A3EE' transform='rotate(58 112 188)'/%3E%3Ccircle cx='70' cy='40' r='3' fill='%23F2B23E'/%3E%3Ccircle cx='150' cy='76' r='3' fill='%23B7A3EE'/%3E%3Ccircle cx='20' cy='122' r='3' fill='%239FE3D3'/%3E%3Ccircle cx='160' cy='196' r='3' fill='%23DD4B85'/%3E%3C/g%3E%3C/svg%3E");
+}
+*{box-sizing:border-box}
+html,body{margin:0;color:var(--ink);font:15px/1.45 Inter,system-ui,sans-serif}
+body{background:var(--bg) var(--sprinkles);min-height:100vh}
+button,input,select,textarea{font:inherit;color:inherit}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;margin:0;letter-spacing:-.01em}
+a{color:var(--mint)}
+.hidden{display:none!important}
+
+/* ---------- Header ---------- */
+.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:20px;padding:14px 28px;background:rgba(255,255,255,.94);backdrop-filter:blur(6px)}
+.top::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:5px;background:repeating-linear-gradient(90deg,var(--pink) 0 28px,var(--mint-l) 28px 56px,var(--gold) 56px 84px,var(--lilac) 84px 112px)}
+.brand{display:flex;align-items:center;gap:10px}
+.logo{font-family:Fraunces,serif;font-style:italic;font-weight:800;font-size:28px;color:var(--pink);letter-spacing:.01em;line-height:1}
+.brand-sub{font-weight:600;color:var(--muted);font-size:14px}
+.tabs{display:flex;gap:4px;margin-left:12px}
+.tab{border:0;background:none;padding:8px 16px;border-radius:999px;cursor:pointer;font-weight:600;color:var(--muted)}
+.tab:hover{background:var(--pink-soft);color:var(--pink-d)}
+.tab.on{background:var(--pink);color:#fff;box-shadow:0 4px 12px rgba(221,75,133,.3)}
+.who{margin-left:auto;display:flex;align-items:center;gap:10px;font-weight:600}
+.linkbtn{border:0;background:none;color:var(--muted);cursor:pointer;text-decoration:underline;padding:4px}
+.demo-bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 28px 10px;background:var(--gold-soft);font-size:14px}
+.demo-bar b{color:#8A5A00}
+.demo-bar select{padding:6px 10px;border-radius:10px;border:1px solid #EBD39A;background:#fff;font-weight:600}
+
+main{max-width:1240px;margin:0 auto;padding:30px 28px 60px}
+
+/* ---------- Genéricos ---------- */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}
+.btn{border:0;border-radius:999px;padding:10px 18px;font-weight:600;cursor:pointer;background:var(--ink);color:#fff;transition:transform .06s,box-shadow .15s,opacity .15s}
+.btn:hover{box-shadow:0 4px 14px rgba(58,28,53,.18)}
+.btn:active{transform:translateY(1px)}
+.btn:disabled{opacity:.45;cursor:not-allowed;box-shadow:none}
+.btn.coral{background:linear-gradient(135deg,var(--pink),#E86A8F)}
+.btn.teal{background:var(--mint)}
+.btn.ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.btn.sm{padding:6px 12px;font-size:13px}
+.btn.danger{background:#fff;color:var(--danger);border:1px solid #F0C9C5}
+.field{display:flex;flex-direction:column;gap:5px;font-size:13px;font-weight:600;color:var(--muted)}
+.field input,.field select,.field textarea{padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);font-weight:400;font-size:15px}
+.field input:focus,.field select:focus,.field textarea:focus{outline:3px solid var(--pink-soft);border-color:var(--pink)}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.row>.field{flex:1;min-width:120px}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+.pill{display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:700}
+.pill.teal{background:var(--mint-soft);color:var(--mint)}
+.pill.coral{background:var(--pink-soft);color:var(--pink-d)}
+.pill.gold{background:var(--gold-soft);color:#8A5A00}
+.pill.gray{background:#F6EEF2;color:var(--muted)}
+.err{color:var(--danger);font-size:13px;font-weight:600}
+.av{width:30px;height:30px;border-radius:50%;display:inline-grid;place-items:center;color:#fff;font-weight:700;font-size:12px;flex:none}
+.av.lg{width:70px;height:70px;font-size:24px;border:4px solid #fff;box-shadow:0 6px 18px rgba(58,28,53,.15)}
+.section-title{font-size:22px;margin-bottom:4px}
+.empty{padding:22px;text-align:center;color:var(--muted);border:1.5px dashed var(--line);border-radius:14px;background:rgba(255,255,255,.6)}
+
+/* Vela con número (cuenta regresiva) */
+.candle{display:flex;flex-direction:column;align-items:center;min-width:46px}
+.candle .flame{width:9px;height:14px;border-radius:50% 50% 50% 50%/62% 62% 38% 38%;background:radial-gradient(circle at 50% 70%,#FFF1B8 0 30%,var(--gold) 31% 68%,#EA8A3A 69%);margin-bottom:1px;transform-origin:50% 100%;animation:flick 1.8s ease-in-out infinite}
+.candle .wick{width:2px;height:4px;background:#6B4A3A;margin-bottom:1px}
+.candle b{font:italic 700 30px/1 Fraunces,Georgia,serif;color:var(--pink);letter-spacing:-.02em;font-variant-numeric:lining-nums}
+.candle b.today{font-size:19px}
+.candle small{font-size:10px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.07em;margin-top:2px}
+@keyframes flick{0%,100%{transform:rotate(-3deg) scaleY(1)}50%{transform:rotate(3deg) scaleY(1.08)}}
+
+/* Banner de cumpleaños de hoy */
+.today-banner{display:flex;align-items:center;gap:16px;padding:18px 22px;margin-bottom:22px;border-radius:var(--r);background:linear-gradient(120deg,var(--pink) 0%,#EC7A9F 55%,var(--gold) 120%);color:#fff;box-shadow:0 12px 30px rgba(221,75,133,.25);position:relative;overflow:hidden}
+.today-banner::after{content:"";position:absolute;inset:0;background:var(--sprinkles);opacity:.55;mix-blend-mode:screen;pointer-events:none}
+.today-banner .big{font-size:34px}
+.today-banner h2{font-size:24px;font-style:italic}
+.today-banner .btn{margin-left:auto;background:#fff;color:var(--pink-d);position:relative;z-index:1}
+
+/* ---------- Calendario ---------- */
+.cal-wrap{display:grid;grid-template-columns:1fr 340px;gap:24px;align-items:start}
+.cal-card{padding:22px}
+.cal-head{display:flex;align-items:center;gap:8px;margin-bottom:16px}
+.cal-head h2{font-size:32px;font-style:italic;text-transform:capitalize;margin-right:auto;color:var(--ink)}
+.cal-head h2 span{color:var(--pink)}
+.iconbtn{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:18px}
+.iconbtn:hover{background:var(--pink-soft)}
+.dow,.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.dow div{font-size:11px;font-weight:700;color:var(--muted);text-align:center;padding:4px 0;text-transform:uppercase;letter-spacing:.08em}
+.day{min-height:104px;border-radius:14px;background:#FFFBFC;border:1px solid #F8E8EE;padding:6px;display:flex;flex-direction:column;gap:4px}
+.day.out{background:transparent;border-color:transparent}
+.day .n{font-size:12px;font-weight:700;color:var(--muted)}
+.day.today{border:2px solid var(--pink);background:#fff}
+.day.today .n{color:#fff;background:var(--pink);border-radius:999px;padding:0 7px;align-self:flex-start}
+.day.has{background:linear-gradient(180deg,#fff 0%,#FFF0F6 100%);border-color:#F6D3E1}
+.chip{display:flex;align-items:center;gap:6px;border:0;background:#fff;border:1px solid #F3CADB;border-radius:10px;padding:4px 6px;cursor:pointer;text-align:left;width:100%;font-size:12px;font-weight:600;box-shadow:0 2px 6px rgba(221,75,133,.08)}
+.chip:hover{border-color:var(--pink)}
+.chip.me{background:var(--gold-soft);border-color:#F1D9A4}
+.chip .av{width:20px;height:20px;font-size:9px}
+.chip .nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}
+.chip .cnt{background:var(--mint);color:#fff;border-radius:999px;font-size:10px;padding:0 6px;font-weight:700}
+.side{padding:22px}
+.side h3{font-size:21px;font-style:italic;margin-bottom:10px}
+.up{display:flex;align-items:center;gap:12px;padding:10px;border-radius:14px;cursor:pointer;border:0;background:none;width:100%;text-align:left}
+.up:hover{background:var(--pink-soft)}
+.up .meta{flex:1;min-width:0}
+.up .nm{font-weight:600}
+.up .dt{font-size:13px;color:var(--muted)}
+.up .tags{display:flex;gap:4px;flex-wrap:wrap;margin-top:4px}
+
+/* ---------- Panel lateral ---------- */
+.backdrop{position:fixed;inset:0;background:rgba(58,28,53,.42);display:flex;justify-content:flex-end;z-index:50;animation:fade .15s}
+@keyframes fade{from{opacity:0}}
+.panel{width:min(660px,100%);height:100%;background:var(--bg) var(--sprinkles);overflow:auto;box-shadow:-10px 0 40px rgba(0,0,0,.18);display:flex;flex-direction:column;animation:slide .2s ease-out}
+@keyframes slide{from{transform:translateX(30px);opacity:.6}}
+.panel-head{display:flex;gap:16px;align-items:center;padding:26px 24px;background:linear-gradient(130deg,var(--pink-soft) 0%,var(--gold-soft) 60%,var(--mint-soft) 100%);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:2}
+.panel-head h2{font-size:27px;font-style:italic}
+.close{margin-left:auto;align-self:flex-start;background:rgba(255,255,255,.8)}
+.panel-body{padding:22px 24px 40px;display:flex;flex-direction:column;gap:20px}
+.block{padding:18px 20px}
+.block h3{font-size:19px;margin-bottom:12px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+
+/* ¿Cómo participas? */
+.part{padding:18px 20px;background:#fff;border:2px solid var(--pink-soft);border-radius:var(--r)}
+.part h3{font-size:19px;margin-bottom:4px}
+.seg{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}
+.seg button{border:1.5px solid var(--line);background:#fff;border-radius:14px;padding:10px 6px;cursor:pointer;font-weight:600;font-size:13px;display:flex;flex-direction:column;align-items:center;gap:3px;transition:all .12s}
+.seg button .e{font-size:20px}
+.seg button:hover{border-color:var(--pink)}
+.seg button.on{background:var(--pink);border-color:var(--pink);color:#fff;box-shadow:0 6px 16px rgba(221,75,133,.28)}
+.seg button:disabled{opacity:.5;cursor:wait}
+.mytotal{display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding:12px 14px;border-radius:14px;background:var(--mint-soft)}
+.mytotal b{font-family:Fraunces,serif;font-size:24px;color:var(--mint)}
+.intern-note{display:flex;gap:12px;align-items:center;padding:16px 18px;border-radius:var(--r);background:var(--gold-soft);color:#6B4A00}
+.intern-note .big{font-size:28px}
+
+.wishes{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px}
+.wish{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.wish.chosen{border:2px solid var(--mint);box-shadow:0 0 0 4px var(--mint-soft)}
+.wish.over{border-color:#F0C9C5}
+.wish img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:#F7EEF2}
+.wish .noimg{width:100%;aspect-ratio:4/3;display:grid;place-items:center;font-size:34px;background:linear-gradient(135deg,var(--pink-soft),var(--gold-soft))}
+.wish .wb{padding:10px 12px;display:flex;flex-direction:column;gap:6px;flex:1}
+.wish .wt{font-weight:600}
+.wish .wp{font-family:Fraunces,serif;font-weight:700;font-size:19px}
+.wish .wa{margin-top:auto;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.members{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.member{display:flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:3px 10px 3px 3px;font-size:13px;font-weight:600}
+.member .av{width:24px;height:24px;font-size:10px}
+.cost{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0 4px}
+.cost div{background:var(--bg);border-radius:14px;padding:10px 12px}
+.cost b{display:block;font-family:Fraunces,serif;font-size:22px}
+.cost span{font-size:12px;color:var(--muted);font-weight:600}
+.cake-choice{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:12px 14px;border-radius:14px;background:linear-gradient(135deg,var(--pink-soft),#fff)}
+.secret{background:linear-gradient(135deg,var(--ink),#5A2C52);color:#fff;border-radius:var(--r);padding:20px;display:flex;gap:14px;align-items:center}
+.secret .big{font-size:34px}
+
+/* Chat */
+.chat{display:flex;flex-direction:column;gap:10px}
+.msgs{max-height:340px;min-height:120px;overflow:auto;display:flex;flex-direction:column;gap:8px;padding:6px 2px}
+.msg{max-width:78%;padding:8px 12px;border-radius:16px 16px 16px 4px;background:#fff;border:1px solid var(--line);align-self:flex-start}
+.msg.mine{align-self:flex-end;background:var(--pink);color:#fff;border-color:var(--pink);border-radius:16px 16px 4px 16px}
+.msg .from{font-size:11px;font-weight:700;opacity:.75;margin-bottom:2px}
+.msg .t{font-size:10px;opacity:.6;margin-top:3px;text-align:right}
+.msg .tx{white-space:pre-wrap;word-wrap:break-word}
+.chat form{display:flex;gap:8px}
+.chat input{flex:1;padding:10px 14px;border:1px solid var(--line);border-radius:999px;background:#fff}
+
+/* Mi lista */
+.two{display:grid;grid-template-columns:1.4fr 1fr;gap:24px;align-items:start}
+.pad{padding:24px}
+.meter{position:relative;height:12px;border-radius:999px;background:#F6EEF2;overflow:hidden;margin:10px 0 6px}
+.meter i{position:absolute;top:0;bottom:0;left:0;background:var(--pink)}
+.meter .ideal{position:absolute;top:0;bottom:0;background:repeating-linear-gradient(45deg,rgba(32,137,122,.25) 0 4px,rgba(32,137,122,.12) 4px 8px)}
+.drop{border:1.5px dashed var(--line);border-radius:14px;padding:10px 12px;display:flex;align-items:center;gap:10px;cursor:pointer;background:#fff;font-size:14px;color:var(--muted)}
+.drop img{width:44px;height:44px;object-fit:cover;border-radius:10px}
+
+/* Admin */
+table{width:100%;border-collapse:collapse}
+th,td{text-align:left;padding:9px 6px;border-bottom:1px solid var(--line);font-size:14px}
+th{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+td.c,th.c{text-align:center}
+textarea{resize:vertical}
+.claims-list{display:flex;flex-direction:column;gap:10px}
+.claim{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:var(--gold-soft);border-radius:14px;padding:10px 12px}
+.claim .txt{flex:1;min-width:200px}
+.status-ok{color:var(--mint);font-weight:600;font-size:13px}
+.status-no{color:var(--muted);font-size:13px}
+input[type=checkbox]{accent-color:var(--pink);width:17px;height:17px;cursor:pointer}
+
+/* Auth */
+.auth{min-height:100vh;display:grid;place-items:center;padding:24px}
+.auth .card{width:min(430px,100%);padding:32px;display:flex;flex-direction:column;gap:14px;position:relative;overflow:hidden}
+.auth .card::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:repeating-linear-gradient(90deg,var(--pink) 0 28px,var(--mint-l) 28px 56px,var(--gold) 56px 84px,var(--lilac) 84px 112px)}
+.auth .logo{font-size:44px}
+
+#toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:11px 20px;border-radius:999px;font-weight:600;z-index:99;opacity:0;pointer-events:none;transition:opacity .2s}
+#toast.show{opacity:1}
+
+/* Confeti */
+.confetti{position:fixed;inset:0;pointer-events:none;z-index:120;overflow:hidden}
+.confetti i{position:absolute;top:-12px;width:8px;height:14px;border-radius:2px;animation:fall linear forwards}
+@keyframes fall{to{transform:translate3d(var(--dx),105vh,0) rotate(var(--rot));opacity:.9}}
+@media (prefers-reduced-motion:reduce){.candle .flame,.backdrop,.panel{animation:none}.confetti{display:none}}
+
+@media (max-width:960px){
+  .cal-wrap,.two{grid-template-columns:1fr}
+  .top{padding:12px 16px;flex-wrap:wrap}
+  main{padding:18px 14px 50px}
+  .day{min-height:62px;padding:4px}
+  .chip .nm,.chip .cnt{display:none}
+  .chip{justify-content:center;padding:3px}
+  .seg{grid-template-columns:1fr 1fr}
+  .cal-head h2{font-size:24px}
+}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div id="toast"></div>
+<script type="module">
+/* =====================================================================
+   CONFIGURACIÓN
+   - Con supabaseUrl vacío, la app corre en MODO DEMO (datos de prueba
+     guardados solo en este navegador).
+   - Para usarla de verdad, pega aquí la URL y la "anon public key" de tu
+     proyecto Supabase (ver README.md). La anon key es pública por diseño:
+     la seguridad la ponen las reglas de la base de datos (schema.sql).
+   ===================================================================== */
+const CONFIG = {
+  officeName: 'IENN',
+  supabaseUrl: '',      // ej: 'https://abcdefghijk.supabase.co'
+  supabaseAnonKey: '',  // ej: 'eyJhbGciOi...'
+};
+const MAX_WISHES = 6;
+// [nombre, 'MM-DD', club de la torta, pasante]
+const DEMO_PEOPLE = [["María Pérez", "11-20", true, false], ["Juan López", "12-05", true, false], ["Ana Gómez", "01-15", false, false], ["Pedro Ruiz", "03-02", false, true], ["Laura Díaz", "06-06", true, false], ["Carlos Mora", "09-10", true, false]];
+const DEMO_ME = "Laura Díaz";
+const DEFAULT_SETTINGS = { budgetMin: 140, budget: 160, currency: 'USD', cakeInBudget: true };
+
+/* ---------- utilidades ---------- */
+const $ = (s, r = document) => r.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const uid = () => Math.random().toString(36).slice(2, 10) + Date.now().toString(36).slice(-4);
+const pad = n => String(n).padStart(2, '0');
+const MONTHS = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+const validBday = b => /^\d{2}-\d{2}$/.test(b || '');
+const gidOf = (id, year) => `${id}_${year}`;
+const CAKES = ['Chocolate','Tres leches','Vainilla','Red velvet','Zanahoria','Marquesa / torta fría','Cheesecake','Selva negra','Otra'];
+
+function nextBirthday(mmdd) {
+  const [m, d] = mmdd.split('-').map(Number);
+  const t = new Date(); const today = new Date(t.getFullYear(), t.getMonth(), t.getDate());
+  let y = today.getFullYear(); let dt = new Date(y, m - 1, d);
+  if (dt < today) { y++; dt = new Date(y, m - 1, d); }
+  return { date: dt, year: y, days: Math.round((dt - today) / 86400000) };
+}
+const fmtBday = mmdd => { const [m, d] = mmdd.split('-').map(Number); return `${d} de ${MONTHS[m - 1]}`; };
+const firstName = p => (p?.name || '').split(' ')[0] || '';
+function initials(name) { const w = (name || '?').trim().split(/\s+/); return ((w[0]?.[0] || '') + (w[1]?.[0] || '')).toUpperCase(); }
+const AV_COLORS = ['#DD4B85','#20897A','#7A5AD0','#D98A1E','#2F6DB5','#B23A6F','#3E8E41','#C2410C','#0F766E','#9B3FA8'];
+function avColor(s) { let h = 0; for (const c of s || '') h = (h * 31 + c.charCodeAt(0)) >>> 0; return AV_COLORS[h % AV_COLORS.length]; }
+const avatar = (p, cls = '') => `<span class="av ${cls}" style="background:${avColor(p?.name)}" title="${esc(p?.name || '')}">${esc(initials(p?.name))}</span>`;
+const candle = days => `<div class="candle"><i class="flame"></i><i class="wick"></i>${days === 0 ? '<b class="today">¡Hoy!</b>' : `<b>${days}</b><small>${days === 1 ? 'día' : 'días'}</small>`}</div>`;
+function money(n) {
+  const c = S.settings.currency || 'USD';
+  try { return new Intl.NumberFormat('es-VE', { style: 'currency', currency: c, maximumFractionDigits: 2 }).format(+n || 0); }
+  catch { return `${c} ${(+n || 0).toFixed(2)}`; }
+}
+let toastT;
+function toast(msg) { const t = $('#toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove('show'), 3000); }
+function confetti() {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const box = document.createElement('div'); box.className = 'confetti';
+  const colors = ['#DD4B85', '#9FE3D3', '#F2B23E', '#B7A3EE', '#FDE5EF'];
+  for (let i = 0; i < 70; i++) {
+    const c = document.createElement('i');
+    c.style.left = Math.random() * 100 + 'vw'; c.style.background = colors[i % colors.length];
+    c.style.setProperty('--dx', (Math.random() * 160 - 80) + 'px'); c.style.setProperty('--rot', (Math.random() * 720 - 360) + 'deg');
+    c.style.animationDuration = (1.4 + Math.random() * 1.3) + 's'; c.style.animationDelay = Math.random() * .25 + 's';
+    if (i % 3 === 0) { c.style.width = '7px'; c.style.height = '7px'; c.style.borderRadius = '50%'; }
+    box.appendChild(c);
+  }
+  document.body.appendChild(box); setTimeout(() => box.remove(), 3200);
+}
+function errMsg(e) {
+  const m = e?.message || '';
+  if (e?.code === '42501' || /permission denied|row-level security/i.test(m)) return 'No tienes permiso para hacer eso.';
+  if (/Invalid login credentials/i.test(m)) return 'Email o contraseña incorrectos.';
+  if (/already registered|already been registered/i.test(m)) return 'Ese email ya tiene cuenta. Usa "Entrar".';
+  if (/Password should be at least/i.test(m)) return 'La contraseña debe tener al menos 6 caracteres.';
+  if (/invalid format|Unable to validate email/i.test(m)) return 'Ese email no es válido.';
+  if (/Email not confirmed/i.test(m)) return 'Falta confirmar el email (la admin debe desactivar "Confirm email" en Supabase).';
+  if (/duplicate key.*claims/i.test(m)) return 'Ya enviaste una solicitud.';
+  if (/Failed to fetch|NetworkError/i.test(m)) return 'Sin conexión con el servidor.';
+  return m || 'Algo salió mal.';
+}
+const safe = fn => async (...a) => { try { await fn(...a); } catch (e) { console.error(e); toast(errMsg(e)); } };
+
+function fileToDataUrl(file, max = 480) {
+  return new Promise((res, rej) => {
+    const img = new Image(); const url = URL.createObjectURL(file);
+    img.onload = () => {
+      const r = Math.min(1, max / Math.max(img.width, img.height));
+      const c = document.createElement('canvas'); c.width = Math.round(img.width * r); c.height = Math.round(img.height * r);
+      c.getContext('2d').drawImage(img, 0, 0, c.width, c.height); URL.revokeObjectURL(url);
+      res(c.toDataURL('image/jpeg', 0.72));
+    };
+    img.onerror = () => { URL.revokeObjectURL(url); rej(new Error('No se pudo leer la imagen')); };
+    img.src = url;
+  });
+}
+
+/* ---------- importar lista "Nombre, dd/mm" ---------- */
+function parseLine(line) {
+  let rest = line.replace(/[^\s,;<>()]+@[^\s,;<>()]+\.[^\s,;<>()]+/, ' ');
+  let d, m, dateStr;
+  const mName = rest.match(new RegExp(`(\\d{1,2})\\s+de\\s+(${MONTHS.join('|')})`, 'i'));
+  const mNum = rest.match(/(\d{1,2})\s*[\/.\-]\s*(\d{1,2})(?:\s*[\/.\-]\s*\d{2,4})?/);
+  if (mName) { d = +mName[1]; m = MONTHS.indexOf(mName[2].toLowerCase()) + 1; dateStr = mName[0]; }
+  else if (mNum) { d = +mNum[1]; m = +mNum[2]; dateStr = mNum[0]; }
+  else return null;
+  if (m < 1 || m > 12 || d < 1 || d > 31) return null;
+  const name = rest.replace(dateStr, ' ').replace(/[,;\t|–—]+|\s-\s/g, ' ').replace(/\s+/g, ' ').trim();
+  if (!name) return null;
+  return { name, birthday: `${pad(m)}-${pad(d)}` };
+}
+const parseDM = str => { const p = parseLine(`x ${str}`); return p ? p.birthday : null; };
+
+/* ¿Esta persona paga la torta de este cumpleaños? (misma regla que la base de datos) */
+function inCake(person, honoreeId, g) {
+  if (!person || person.id === honoreeId || person.intern) return false;
+  if ((g?.cakeOut || []).includes(person.id)) return false;
+  return !!person.cakeClub || (g?.cakeIn || []).includes(person.id);
+}
+
+/* =====================================================================
+   DATOS — MODO DEMO (localStorage)
+   ===================================================================== */
+function seedDemo() {
+  const people = {}; let adminId = null;
+  DEMO_PEOPLE.forEach(([name, b, club, intern], i) => {
+    const id = 'p' + (i + 1);
+    people[id] = { id, name, birthday: b, wishes: [], cake: {}, linked: false, cakeClub: !!club, intern: !!intern };
+    if (name === DEMO_ME) adminId = id;
+  });
+  adminId ||= 'p1'; people[adminId].linked = true;
+  return { adminId, settings: { ...DEFAULT_SETTINGS }, people, groups: {}, messages: {} };
+}
+function makeDemoApi() {
+  const KEY = 'ienn-cumples-demo-v4';
+  const load = () => { try { return JSON.parse(localStorage.getItem(KEY)); } catch { return null; } };
+  let db = load(); if (!db || !db.people) db = seedDemo();
+  const subs = new Set();
+  const fire = () => [...subs].forEach(f => f());
+  const save = () => { try { localStorage.setItem(KEY, JSON.stringify(db)); } catch { toast('El navegador no pudo guardar (¿fotos muy pesadas?)'); } fire(); };
+  window.addEventListener('storage', e => { if (e.key === KEY) { const n = load(); if (n) db = n; fire(); } });
+  const sub = fn => { subs.add(fn); fn(); return () => subs.delete(fn); };
+  let me; try { me = localStorage.getItem(KEY + '-me'); } catch {}
+  if (!me || !db.people[me]) me = db.adminId;
+  const clone = o => JSON.parse(JSON.stringify(o));
+  const ensure = (honoree, year) => {
+    if (honoree === me) throw new Error('No puedes participar en tu propio cumpleaños');
+    const gid = gidOf(honoree, year);
+    return db.groups[gid] ||= { honoree, year, members: [], gift: null, cakeIn: [], cakeOut: [] };
+  };
+  const noIntern = () => { if (db.people[me]?.intern) throw new Error('Los pasantes no se anotan a regalar (¡pero sí reciben!)'); };
+  const canChat = g => g && g.honoree !== me && (g.members.includes(me) || inCake(db.people[me], g.honoree, g));
+  return {
+    mode: 'demo',
+    get me() { return me; },
+    setMe(id) { me = id; try { localStorage.setItem(KEY + '-me', id); } catch {} },
+    isAdmin() { return me === db.adminId; },
+    onPeople(cb) { return sub(() => cb(clone(db.people))); },
+    onSettings(cb) { return sub(() => cb({ ...db.settings })); },
+    onGroups(cb) { return sub(() => { const o = {}; for (const [k, g] of Object.entries(db.groups)) if (g.honoree !== me) o[k] = clone(g); cb(o); }); },
+    onMessages(gid, cb) { return sub(() => { const g = db.groups[gid]; cb(canChat(g) ? clone(db.messages[gid] || []) : []); }); },
+    onClaims(cb) { cb([]); return () => {}; },
+    async updateMe(patch) { Object.assign(db.people[me], patch); save(); },
+    async join(honoree, year) { noIntern(); const g = ensure(honoree, year); if (!g.members.includes(me)) g.members.push(me); save(); },
+    async leave(honoree, year) { const g = ensure(honoree, year); g.members = g.members.filter(x => x !== me); save(); },
+    async joinCake(honoree, year) {
+      noIntern(); const g = ensure(honoree, year);
+      g.cakeOut = g.cakeOut.filter(x => x !== me); g.cakeIn = g.cakeIn.filter(x => x !== me);
+      if (!db.people[me].cakeClub) g.cakeIn.push(me); save();
+    },
+    async leaveCake(honoree, year) { const g = ensure(honoree, year); g.cakeIn = g.cakeIn.filter(x => x !== me); if (!g.cakeOut.includes(me)) g.cakeOut.push(me); save(); },
+    async setGift(honoree, year, wishId) { const g = ensure(honoree, year); if (g.members.includes(me)) { g.gift = wishId; save(); } },
+    async send(honoree, year, text) {
+      const g = ensure(honoree, year); if (!canChat(g)) throw new Error('Anótate al regalo o a la torta para escribir en el chat');
+      (db.messages[gidOf(honoree, year)] ||= []).push({ id: uid(), from: me, text, ts: Date.now() }); save();
+    },
+    async adminSave(p) {
+      if (p.id && db.people[p.id]) Object.assign(db.people[p.id], { name: p.name, birthday: p.birthday });
+      else { const id = 'p' + uid(); db.people[id] = { id, name: p.name, birthday: p.birthday, wishes: [], cake: {}, linked: false, cakeClub: false, intern: false }; }
+      save();
+    },
+    async adminImport(list) {
+      for (const r of list) {
+        const ex = Object.values(db.people).find(p => p.name.toLowerCase() === r.name.toLowerCase());
+        if (ex) ex.birthday = r.birthday;
+        else { const id = 'p' + uid(); db.people[id] = { id, name: r.name, birthday: r.birthday, wishes: [], cake: {}, linked: false, cakeClub: false, intern: false }; }
+      }
+      save();
+    },
+    async adminFlags(id, f) {
+      const p = db.people[id]; if (!p) return;
+      p.intern = !!f.intern; p.cakeClub = !!f.cakeClub && !f.intern;
+      if (p.intern) for (const g of Object.values(db.groups)) { g.members = g.members.filter(x => x !== id); g.cakeIn = g.cakeIn.filter(x => x !== id); }
+      save();
+    },
+    async adminDelete(id) { if (id === me) throw new Error('No puedes borrarte a ti misma'); delete db.people[id]; save(); },
+    async adminUnlink(id) { if (db.people[id]) db.people[id].linked = false; save(); },
+    async adminApprove() {}, async adminReject() {},
+    async saveSettings(s) { if (s.budgetMin > s.budget) throw new Error('El mínimo no puede ser mayor que el máximo'); db.settings = { ...db.settings, ...s }; save(); },
+    reset() { db = seedDemo(); me = db.adminId; try { localStorage.setItem(KEY + '-me', me); } catch {} save(); },
+    async signOut() {},
+  };
+}
+
+/* =====================================================================
+   DATOS — SUPABASE
+   ===================================================================== */
+let SB = null;
+async function loadSupabase() {
+  const m = await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm');
+  SB = m.createClient(CONFIG.supabaseUrl, CONFIG.supabaseAnonKey);
+}
+function makeSupabaseApi(status) {
+  const sb = SB, me = status.person_id, admin = !!status.is_admin;
+  const chk = r => { if (r.error) throw r.error; return r.data; };
+  // Lee la tabla y la vuelve a leer cada vez que cambia algo (tiempo real)
+  const live = (table, fetcher, cb, filter) => {
+    let alive = true, t = 0;
+    const run = async () => { try { const v = await fetcher(); if (alive) cb(v); } catch (e) { console.error(e); toast(errMsg(e)); } };
+    const ch = sb.channel(`${table}-${uid()}`)
+      .on('postgres_changes', { event: '*', schema: 'public', table, ...(filter ? { filter } : {}) }, () => { clearTimeout(t); t = setTimeout(run, 120); })
+      .subscribe();
+    run();
+    const onVis = () => { if (document.visibilityState === 'visible') run(); };
+    document.addEventListener('visibilitychange', onVis);
+    return () => { alive = false; clearTimeout(t); document.removeEventListener('visibilitychange', onVis); sb.removeChannel(ch); };
+  };
+  const rpc = async (fn, args) => chk(await sb.rpc(fn, args));
+  return {
+    mode: 'supabase', me,
+    isAdmin: () => admin,
+    onPeople(cb) {
+      return live('people', async () => {
+        const rows = chk(await sb.from('people').select('id,name,birthday,wishes,cake,user_id,cake_club,is_intern'));
+        const o = {}; rows.forEach(p => o[p.id] = { id: p.id, name: p.name, birthday: p.birthday, wishes: p.wishes || [], cake: p.cake || {}, linked: !!p.user_id, cakeClub: !!p.cake_club, intern: !!p.is_intern });
+        return o;
+      }, cb);
+    },
+    onSettings(cb) {
+      return live('settings', async () => {
+        const d = chk(await sb.from('settings').select('*').eq('id', 1).maybeSingle());
+        return d ? { budgetMin: +d.budget_min, budget: +d.budget, currency: d.currency, cakeInBudget: d.cake_in_budget } : {};
+      }, cb);
+    },
+    onGroups(cb) {
+      return live('groups', async () => {
+        const rows = chk(await sb.from('groups').select('*'));
+        const o = {}; rows.forEach(g => o[g.id] = { honoree: g.honoree, year: g.year, members: g.members || [], gift: g.gift, cakeIn: g.cake_in || [], cakeOut: g.cake_out || [] });
+        return o;
+      }, cb);
+    },
+    onMessages(gid, cb) {
+      return live('messages', async () => {
+        const rows = chk(await sb.from('messages').select('*').eq('group_id', gid).order('created_at'));
+        return rows.map(m => ({ id: m.id, from: m.author, text: m.body, ts: Date.parse(m.created_at) }));
+      }, cb, `group_id=eq.${gid}`);
+    },
+    onClaims(cb) {
+      if (!admin) { cb([]); return () => {}; }
+      return live('claims', async () => chk(await sb.from('claims').select('*').order('created_at')).map(c => ({ userId: c.user_id, personId: c.person_id, email: c.email })), cb);
+    },
+    async updateMe(patch) { chk(await sb.from('people').update(patch).eq('id', me)); },
+    join: (h, y) => rpc('join_gift', { p_honoree: h, p_year: y }),
+    leave: (h, y) => rpc('leave_gift', { p_group: gidOf(h, y) }),
+    joinCake: (h, y) => rpc('join_cake', { p_honoree: h, p_year: y }),
+    leaveCake: (h, y) => rpc('leave_cake', { p_honoree: h, p_year: y }),
+    setGift: (h, y, w) => rpc('set_gift', { p_group: gidOf(h, y), p_wish: w }),
+    send: (h, y, text) => rpc('post_message', { p_honoree: h, p_year: y, p_body: text }),
+    adminSave: p => rpc('admin_save_person', { p_id: p.id || null, p_name: p.name, p_birthday: p.birthday }),
+    adminImport: list => rpc('admin_import', { p_rows: list }),
+    adminFlags: (id, f) => rpc('admin_set_flags', { p_person: id, p_cake_club: !!f.cakeClub, p_intern: !!f.intern }),
+    adminDelete: id => rpc('admin_delete_person', { p_id: id }),
+    adminUnlink: id => rpc('admin_unlink', { p_person: id }),
+    adminApprove: u => rpc('admin_approve', { p_user: u }),
+    adminReject: u => rpc('admin_reject', { p_user: u }),
+    saveSettings: s => rpc('admin_settings', { p_budget_min: s.budgetMin, p_budget: s.budget, p_currency: s.currency, p_cake: s.cakeInBudget }),
+    async signOut() { await sb.auth.signOut(); },
+  };
+}
+
+/* =====================================================================
+   ESTADO Y SESIÓN
+   ===================================================================== */
+let api;
+const S = { me: null, admin: false, people: {}, settings: { ...DEFAULT_SETTINGS }, groups: {}, claims: [], view: 'calendario', month: null, open: null, msgs: [], msgGid: null };
+let unsubs = [], msgUnsub = null;
+
+function startSession() {
+  stopSession();
+  S.me = api.me; S.admin = api.isAdmin(); S.people = {}; S.groups = {}; S.claims = [];
+  const t = new Date(); S.month = new Date(t.getFullYear(), t.getMonth(), 1);
+  renderShell();
+  unsubs.push(api.onSettings(s => { S.settings = { ...DEFAULT_SETTINGS, ...s }; refresh(); }));
+  unsubs.push(api.onPeople(p => { S.people = p; refresh(); }));
+  unsubs.push(api.onGroups(g => { S.groups = g; refresh(); }));
+  if (S.admin) unsubs.push(api.onClaims(c => { S.claims = c; refresh(); }));
+  route();
+}
+function stopSession() {
+  unsubs.forEach(u => u()); unsubs = [];
+  if (msgUnsub) { msgUnsub(); msgUnsub = null; } S.msgGid = null; S.open = null;
+}
+let rq = 0;
+function refresh() { if (rq) return; rq = requestAnimationFrame(() => { rq = 0; doRefresh(); }); }
+function doRefresh() {
+  if (!$('#main')) return;
+  renderHeader();
+  if (S.view === 'calendario') refreshCalendar();
+  else if (S.view === 'mi-lista') refreshMyList();
+  else if (S.view === 'admin') refreshAdmin();
+  if (S.open) refreshPanel();
+}
+const myPerson = () => S.people[S.me] || { id: S.me, name: '', wishes: [], cake: {} };
+const groupFor = id => { const p = S.people[id]; if (!p || !validBday(p.birthday)) return null; return S.groups[gidOf(id, nextBirthday(p.birthday).year)] || null; };
+const cakePayers = (honoreeId, g) => Object.values(S.people).filter(x => inCake(x, honoreeId, g)).sort((a, b) => a.name.localeCompare(b.name));
+const availableFor = p => (+S.settings.budget || 0) - (S.settings.cakeInBudget ? (+p?.cake?.price || 0) : 0);
+
+/* =====================================================================
+   SHELL, HEADER, ROUTING
+   ===================================================================== */
+function renderShell() {
+  $('#app').innerHTML = `
+    <header class="top">
+      <div class="brand"><span class="logo">${esc(CONFIG.officeName)}</span><span class="brand-sub">Cumpleaños 🎂</span></div>
+      <nav class="tabs" id="tabs"></nav>
+      <div class="who" id="who"></div>
+    </header>
+    ${api.mode === 'demo' ? `<div class="demo-bar"><b>Modo demo</b><span>Lo que hagas se guarda solo en este navegador.</span>
+      <label>Ver la app como: <select id="as"></select></label>
+      <span class="muted small">Cambia de persona para ver qué ve cada quien, y lo que le queda oculto al cumpleañero.</span></div>` : ''}
+    <main id="main"></main>
+    <div id="modal-root"></div>`;
+  $('#tabs').addEventListener('click', e => { const b = e.target.closest('[data-v]'); if (b) location.hash = b.dataset.v; });
+  $('#who').addEventListener('click', e => { if (e.target.closest('#logout')) safe(() => api.signOut())(); });
+  const as = $('#as');
+  if (as) as.addEventListener('change', () => { api.setMe(as.value); startSession(); });
+}
+function renderHeader() {
+  const pending = S.claims.length;
+  const tabs = [['calendario', 'Calendario'], ['mi-lista', 'Mi lista'], ...(S.admin ? [['admin', `Admin${pending ? ` (${pending})` : ''}`]] : [])];
+  $('#tabs').innerHTML = tabs.map(([v, l]) => `<button class="tab ${S.view === v ? 'on' : ''}" data-v="${v}">${l}</button>`).join('');
+  const me = myPerson();
+  $('#who').innerHTML = `${avatar(me)}<span>${esc(firstName(me))}</span>${api.mode !== 'demo' ? '<button class="linkbtn" id="logout">Salir</button>' : ''}`;
+  const as = $('#as');
+  if (as && document.activeElement !== as) {
+    const list = Object.values(S.people).sort((a, b) => a.name.localeCompare(b.name));
+    const html = list.map(p => `<option value="${esc(p.id)}" ${p.id === S.me ? 'selected' : ''}>${esc(p.name)}${p.intern ? ' (pasante)' : ''}</option>`).join('');
+    if (as.dataset.h !== html) { as.innerHTML = html; as.dataset.h = html; }
+  }
+}
+function route() {
+  let v = (location.hash || '#calendario').slice(1);
+  if (!['calendario', 'mi-lista', 'admin'].includes(v) || (v === 'admin' && !S.admin)) v = 'calendario';
+  if (S.open) closePanel();
+  S.view = v;
+  if (v === 'calendario') buildCalendar(); else if (v === 'mi-lista') buildMyList(); else buildAdmin();
+  renderHeader();
+}
+window.addEventListener('hashchange', () => { if (api && S.me && $('#main')) route(); });
+
+/* =====================================================================
+   CALENDARIO
+   ===================================================================== */
+function buildCalendar() {
+  $('#main').innerHTML = `
+    <div id="today-box"></div>
+    <section class="cal-wrap">
+      <div class="card cal-card">
+        <div class="cal-head">
+          <h2 id="cal-title"></h2>
+          <button class="btn ghost sm" id="cal-today">Hoy</button>
+          <button class="iconbtn" id="cal-prev" aria-label="Mes anterior">‹</button>
+          <button class="iconbtn" id="cal-next" aria-label="Mes siguiente">›</button>
+        </div>
+        <div class="dow">${['Lun','Mar','Mié','Jue','Vie','Sáb','Dom'].map(d => `<div>${d}</div>`).join('')}</div>
+        <div class="grid" id="grid" style="margin-top:6px"></div>
+      </div>
+      <aside class="card side">
+        <h3>Próximos cumpleaños</h3>
+        <div id="upcoming"></div>
+      </aside>
+    </section>`;
+  const mv = d => { S.month = new Date(S.month.getFullYear(), S.month.getMonth() + d, 1); refreshCalendar(); };
+  $('#cal-prev').onclick = () => mv(-1); $('#cal-next').onclick = () => mv(1);
+  $('#cal-today').onclick = () => { const t = new Date(); S.month = new Date(t.getFullYear(), t.getMonth(), 1); refreshCalendar(); };
+  $('#main').addEventListener('click', e => { const b = e.target.closest('[data-p]'); if (b) openPanel(b.dataset.p); });
+  refreshCalendar();
+}
+function refreshCalendar() {
+  const grid = $('#grid'); if (!grid) return;
+  const y = S.month.getFullYear(), m = S.month.getMonth();
+  $('#cal-title').innerHTML = `${MONTHS[m]} <span>${y}</span>`;
+  const byDay = {};
+  for (const p of Object.values(S.people)) if (validBday(p.birthday)) (byDay[p.birthday] ||= []).push(p);
+  const offset = (new Date(y, m, 1).getDay() + 6) % 7, dim = new Date(y, m + 1, 0).getDate();
+  const t = new Date(); let html = '';
+  for (let i = 0; i < offset; i++) html += '<div class="day out"></div>';
+  for (let d = 1; d <= dim; d++) {
+    const key = `${pad(m + 1)}-${pad(d)}`, list = byDay[key] || [];
+    const isToday = t.getFullYear() === y && t.getMonth() === m && t.getDate() === d;
+    html += `<div class="day ${isToday ? 'today' : ''} ${list.length ? 'has' : ''}"><span class="n">${d}</span>${list.map(p => {
+      const mine = p.id === S.me;
+      const n = mine ? 0 : (S.groups[gidOf(p.id, y)]?.members?.length || 0);
+      return `<button class="chip ${mine ? 'me' : ''}" data-p="${esc(p.id)}" title="${esc(p.name)}">${avatar(p)}<span class="nm">${mine ? '🎂 Tú' : esc(firstName(p))}</span>${n ? `<span class="cnt" title="${n} en el regalo">${n}</span>` : ''}</button>`;
+    }).join('')}</div>`;
+  }
+  const tail = (7 - ((offset + dim) % 7)) % 7;
+  for (let i = 0; i < tail; i++) html += '<div class="day out"></div>';
+  grid.innerHTML = html;
+
+  const all = Object.values(S.people).filter(p => validBday(p.birthday)).map(p => ({ p, nb: nextBirthday(p.birthday) })).sort((a, b) => a.nb.days - b.nb.days);
+  // Banner de hoy
+  const todays = all.filter(x => x.nb.days === 0).map(x => x.p);
+  const mineToday = todays.some(p => p.id === S.me);
+  const others = todays.filter(p => p.id !== S.me);
+  $('#today-box').innerHTML = mineToday
+    ? `<div class="today-banner"><div class="big">🎂</div><div><h2>¡Feliz cumpleaños, ${esc(firstName(myPerson()))}!</h2><div style="opacity:.9">Hoy es tu día. Disfrútalo mucho 🎉</div></div></div>`
+    : others.length ? `<div class="today-banner"><div class="big">🎉</div><div><h2>¡Hoy cumple ${others.map(p => esc(firstName(p))).join(' y ')}!</h2><div style="opacity:.9">No olvides felicitar${others.length > 1 ? 'les' : 'le'}.</div></div>
+        <button class="btn sm" data-p="${esc(others[0].id)}">Ver</button></div>` : '';
+
+  $('#upcoming').innerHTML = all.length ? all.slice(0, 8).map(({ p, nb }) => {
+    const mine = p.id === S.me; const g = mine ? null : groupFor(p.id);
+    const n = g?.members?.length || 0, c = mine ? 0 : cakePayers(p.id, g).length;
+    const tags = mine ? '<span class="pill gold">Tu cumpleaños 🤫</span>'
+      : `<span class="pill ${n ? 'teal' : 'gray'}">🎁 ${n}</span><span class="pill ${c ? 'coral' : 'gray'}">🎂 ${c}</span>${p.intern ? '<span class="pill gold">Pasante</span>' : ''}`;
+    return `<button class="up" data-p="${esc(p.id)}">${avatar(p)}<div class="meta"><div class="nm">${esc(p.name)}${mine ? ' (tú)' : ''}</div><div class="dt">${fmtBday(p.birthday)}</div><div class="tags">${tags}</div></div>${candle(nb.days)}</button>`;
+  }).join('') : '<div class="empty">Todavía no hay personas cargadas.</div>';
+}
+
+/* =====================================================================
+   PANEL DE UNA PERSONA
+   ===================================================================== */
+function openPanel(id) {
+  if (!S.people[id] || !validBday(S.people[id].birthday)) return;
+  S.open = id;
+  const mine = id === S.me;
+  $('#modal-root').innerHTML = `
+    <div class="backdrop" id="bd"><div class="panel" role="dialog" aria-modal="true">
+      <div class="panel-head" id="ph"></div>
+      <div class="panel-body">
+        ${mine ? `<div id="p-mine"></div>` : `
+        <div id="p-part"></div>
+        <div class="card block"><h3>🎁 Lo que le gustaría recibir</h3><div id="p-wishes"></div></div>
+        <div class="card block"><h3>👥 Grupo del regalo</h3><div id="p-group"></div></div>
+        <div class="card block"><h3>🎂 La torta</h3><div id="p-cake"></div></div>
+        <div class="card block"><h3>💬 Chat del cumpleaños <span class="pill gray">${esc(firstName(S.people[id]))} no lo ve</span></h3>
+          <div id="p-chat-locked" class="empty"></div>
+          <div class="chat hidden" id="p-chat"><div class="msgs" id="msgs"></div>
+            <form id="chat-form"><input id="chat-in" maxlength="1000" placeholder="Escribe un mensaje…" autocomplete="off"><button class="btn coral">Enviar</button></form></div>
+        </div>`}
+      </div></div></div>`;
+  $('#bd').addEventListener('click', e => { if (e.target.id === 'bd' || e.target.closest('.close')) closePanel(); });
+  const f = $('#chat-form');
+  if (f) f.addEventListener('submit', safe(async e => {
+    e.preventDefault(); const inp = $('#chat-in'); const t = inp.value.trim(); if (!t) return;
+    const p = S.people[S.open]; inp.value = ''; await api.send(p.id, nextBirthday(p.birthday).year, t);
+  }));
+  $('#modal-root').addEventListener('click', onPanelClick);
+  refreshPanel();
+}
+function closePanel() {
+  S.open = null; $('#modal-root').innerHTML = '';
+  $('#modal-root').removeEventListener('click', onPanelClick);
+  if (msgUnsub) { msgUnsub(); msgUnsub = null; } S.msgGid = null; S.msgs = [];
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && S.open) closePanel(); });
+
+const onPanelClick = safe(async e => {
+  const b = e.target.closest('[data-act]'); if (!b) return;
+  const p = S.people[S.open]; if (!p) return;
+  const y = nextBirthday(p.birthday).year, act = b.dataset.act;
+  if (act === 'edit-mine') { closePanel(); location.hash = 'mi-lista'; return; }
+  const btns = [...document.querySelectorAll('[data-act]')]; btns.forEach(x => x.disabled = true);
+  try {
+    if (act === 'mode') {
+      const want = b.dataset.mode; // both | gift | cake | none
+      const g = groupFor(p.id); const inGift = (g?.members || []).includes(S.me), inC = inCake(myPerson(), p.id, g);
+      const wantGift = want === 'both' || want === 'gift', wantCake = want === 'both' || want === 'cake';
+      if (wantGift && !inGift) await api.join(p.id, y);
+      if (!wantGift && inGift) await api.leave(p.id, y);
+      if (wantCake && !inC) await api.joinCake(p.id, y);
+      if (!wantCake && inC) await api.leaveCake(p.id, y);
+      if (want !== 'none' && ((wantGift && !inGift) || (wantCake && !inC))) { confetti(); toast(`¡Listo! Estás en el cumpleaños de ${firstName(p)} 🎉`); }
+      else if (want === 'none') toast('Listo, no participas en este cumpleaños');
+    }
+    if (act === 'gift') { await api.setGift(p.id, y, b.dataset.id); toast('Regalo elegido para el grupo 🎁'); }
+    if (act === 'ungift') await api.setGift(p.id, y, null);
+  } finally { btns.forEach(x => x.disabled = false); }
+});
+
+function wishCard(w, { chosen = false, actions = '', over = false } = {}) {
+  const link = /^https?:\/\//i.test(w.link || '') ? w.link : '';
+  const img = /^data:image\//.test(w.image || '') ? w.image : '';
+  return `<div class="wish ${chosen ? 'chosen' : ''} ${over ? 'over' : ''}">
+    ${img ? `<img src="${esc(img)}" alt="">` : '<div class="noimg">🎁</div>'}
+    <div class="wb"><div class="wt">${esc(w.title)}</div><div class="wp">${money(w.price)}</div>
+    ${link ? `<a class="small" href="${esc(link)}" target="_blank" rel="noopener noreferrer">Ver dónde comprarlo ↗</a>` : ''}
+    ${over ? '<span class="err">Se pasa del presupuesto</span>' : ''}
+    ${chosen ? '<span class="pill teal">✓ Elegido por el grupo</span>' : ''}
+    <div class="wa">${actions}</div></div></div>`;
+}
+const memberChips = ids => `<div class="members">${ids.map(id => { const m = S.people[id] || { name: '¿?' }; return `<span class="member">${avatar(m)}${esc(id === S.me ? 'Tú' : m.name)}</span>`; }).join('')}</div>`;
+
+function refreshPanel() {
+  const p = S.people[S.open];
+  if (!p) { closePanel(); return; }
+  const nb = nextBirthday(p.birthday), mine = p.id === S.me;
+  $('#ph').innerHTML = `${avatar(p, 'lg')}<div><h2>${esc(p.name)}${mine ? ' (tú)' : ''}</h2>
+    <div class="muted">${fmtBday(p.birthday)} · ${nb.days === 0 ? '<b style="color:var(--pink)">¡es hoy! 🎉</b>' : `faltan ${nb.days} ${nb.days === 1 ? 'día' : 'días'}`}${p.intern ? ' · <span class="pill gold">Pasante</span>' : ''}</div></div>
+    <button class="iconbtn close" aria-label="Cerrar">✕</button>`;
+
+  if (mine) {
+    const w = p.wishes || [];
+    $('#p-mine').innerHTML = `
+      <div class="secret"><div class="big">🤫</div><div><b>Lo que planean tus compañeros es sorpresa.</b><br><span style="opacity:.8">No verás quién se apuntó, qué eligieron ni el chat de tu cumpleaños.</span></div></div>
+      <div class="card block" style="margin-top:18px"><h3>Tu lista de deseos</h3>
+        ${w.length ? `<div class="wishes">${w.map(x => wishCard(x)).join('')}</div>` : '<div class="empty">Todavía no has agregado opciones de regalo.</div>'}
+        <div style="margin-top:14px"><b>Torta:</b> ${p.cake?.type ? `${esc(p.cake.type)}${p.cake.details ? ` · ${esc(p.cake.details)}` : ''} (${money(p.cake.price)})` : '<span class="muted">sin elegir</span>'}</div>
+        <button class="btn coral" style="margin-top:14px" data-act="edit-mine">Editar mi lista</button></div>`;
+    return;
+  }
+
+  const me = myPerson(), iAmIntern = !!me.intern;
+  const g = groupFor(p.id);
+  const members = g?.members || [], inGift = members.includes(S.me);
+  const payers = cakePayers(p.id, g), inC = payers.some(x => x.id === S.me);
+  const gift = g?.gift ? (p.wishes || []).find(w => w.id === g.gift) : null;
+  const cakePrice = +p.cake?.price || 0;
+
+  // ¿Cómo participas?
+  const giftPer = gift ? (+gift.price || 0) / Math.max(members.length, 1) : 0;
+  const cakePer = cakePrice / Math.max(payers.length, 1);
+  const myShare = (inGift ? giftPer : 0) + (inC ? cakePer : 0);
+  const mode = inGift && inC ? 'both' : inGift ? 'gift' : inC ? 'cake' : 'none';
+  const opt = (k, e, l) => `<button data-act="mode" data-mode="${k}" class="${mode === k ? 'on' : ''}"><span class="e">${e}</span>${l}</button>`;
+  $('#p-part').innerHTML = iAmIntern
+    ? `<div class="intern-note"><div class="big">🎓</div><div><b>Como pasante no te anotas a regalar…</b><br>¡pero en tu cumpleaños sí te celebramos! Igual puedes ver su lista y felicitar${p.name ? 'le' : ''} 🎉</div></div>`
+    : `<div class="part"><h3>¿Cómo participas en el cumpleaños de ${esc(firstName(p))}?</h3>
+        <div class="small muted">${me.cakeClub ? 'Estás en el club de la torta: te anotamos a la torta automáticamente, pero puedes cambiarlo.' : 'Elige si te sumas al regalo, a la torta o a los dos.'}</div>
+        <div class="seg">${opt('both', '🎁🎂', 'Regalo y torta')}${opt('gift', '🎁', 'Solo regalo')}${opt('cake', '🎂', 'Solo torta')}${opt('none', '🙅', 'No participo')}</div>
+        ${mode !== 'none' ? `<div class="mytotal"><span><b style="font-family:Inter;font-size:14px;color:var(--ink)">Tu aporte aprox.</b><br><span class="small muted">${inGift ? (gift ? `regalo ${money(giftPer)}` : 'regalo: falta elegir') : ''}${inGift && inC ? ' + ' : ''}${inC ? (cakePrice ? `torta ${money(cakePer)}` : 'torta: sin precio aún') : ''}</span></span><b>${money(myShare)}</b></div>` : ''}
+      </div>`;
+
+  // Lista de deseos
+  const wishes = p.wishes || [];
+  $('#p-wishes').innerHTML = wishes.length ? `<div class="wishes">${wishes.map(w => {
+    const chosen = gift?.id === w.id;
+    const actions = inGift ? (chosen ? `<button class="btn ghost sm" data-act="ungift">Quitar elección</button>` : `<button class="btn teal sm" data-act="gift" data-id="${esc(w.id)}">Elegir este</button>`) : '';
+    return wishCard(w, { chosen, actions });
+  }).join('')}</div>` : `<div class="empty">${esc(firstName(p))} todavía no ha puesto opciones. ¡Pueden sorprenderle igual!</div>`;
+
+  // Grupo del regalo
+  const nIf = inGift || iAmIntern ? members.length : members.length + 1;
+  $('#p-group').innerHTML = `
+    ${members.length ? memberChips(members) : `<div class="muted" style="margin-bottom:6px">Nadie se ha anotado al regalo todavía.</div>`}
+    <div class="cost">
+      <div><span>${gift ? `Regalo elegido: ${esc(gift.title)}` : 'Aún no eligen regalo'}</span><b>${gift ? money(gift.price) : '—'}</b></div>
+      <div><span>${inGift || iAmIntern ? `Por persona (entre ${members.length || 0})` : `Te tocaría si te sumas (entre ${nIf})`}</span><b>${gift ? money((+gift.price || 0) / Math.max(nIf, 1)) : '—'}</b></div>
+    </div>
+    ${inGift && !gift ? '<div class="small muted">Elijan el regalo tocando "Elegir este" en la lista de arriba.</div>' : ''}`;
+
+  // Torta
+  const cIf = inC || iAmIntern ? payers.length : payers.length + 1;
+  $('#p-cake').innerHTML = `
+    ${p.cake?.type ? `<div class="cake-choice"><div><b>${esc(p.cake.type)}</b>${p.cake.details ? `<div class="muted small">${esc(p.cake.details)}</div>` : ''}</div><div style="font-family:Fraunces,serif;font-weight:700;font-size:19px">${cakePrice ? money(cakePrice) : '<span class="muted small">sin precio</span>'}</div></div>`
+      : '<div class="muted">Todavía no ha elegido su torta.</div>'}
+    <div class="small muted" style="margin-top:12px;font-weight:600">La pagan ${payers.length} ${payers.length === 1 ? 'persona' : 'personas'}:</div>
+    ${payers.length ? memberChips(payers.map(x => x.id)) : ''}
+    <div class="cost"><div><span>Torta</span><b>${cakePrice ? money(cakePrice) : '—'}</b></div>
+      <div><span>${inC || iAmIntern ? `Por persona (entre ${payers.length})` : `Te tocaría si te sumas (entre ${cIf})`}</span><b>${cakePrice ? money(cakePrice / Math.max(cIf, 1)) : '—'}</b></div></div>`;
+
+  // Chat
+  const canChat = inGift || inC;
+  $('#p-chat').classList.toggle('hidden', !canChat);
+  $('#p-chat-locked').classList.toggle('hidden', canChat);
+  $('#p-chat-locked').textContent = iAmIntern ? 'El chat es para quienes se anotan al regalo o a la torta.' : 'Anótate al regalo o a la torta para ver el chat y ponerse de acuerdo.';
+  const wantGid = canChat ? gidOf(p.id, nb.year) : null;
+  if (wantGid !== S.msgGid) {
+    if (msgUnsub) { msgUnsub(); msgUnsub = null; }
+    S.msgGid = wantGid; S.msgs = [];
+    if (wantGid) msgUnsub = api.onMessages(wantGid, ms => { S.msgs = ms; renderMsgs(); });
+    renderMsgs();
+  }
+}
+function renderMsgs() {
+  const box = $('#msgs'); if (!box) return;
+  const atBottom = box.scrollHeight - box.scrollTop - box.clientHeight < 40;
+  box.innerHTML = S.msgs.length ? S.msgs.map(m => {
+    const mine = m.from === S.me, who = S.people[m.from];
+    const d = new Date(m.ts);
+    return `<div class="msg ${mine ? 'mine' : ''}">${mine ? '' : `<div class="from">${esc(who?.name || 'Alguien')}</div>`}<div class="tx">${esc(m.text)}</div><div class="t">${pad(d.getDate())}/${pad(d.getMonth() + 1)} ${pad(d.getHours())}:${pad(d.getMinutes())}</div></div>`;
+  }).join('') : '<div class="muted small" style="text-align:center;padding:20px">Aún no hay mensajes. ¡Rompe el hielo! 🎈</div>';
+  if (atBottom || box.dataset.init !== '1') { box.scrollTop = box.scrollHeight; box.dataset.init = '1'; }
+}
+
+/* =====================================================================
+   MI LISTA
+   ===================================================================== */
+let pendingImage = '';
+function buildMyList() {
+  pendingImage = '';
+  $('#main').innerHTML = `
+    <div class="two">
+      <div class="card pad">
+        <h2 class="section-title">Mi lista de deseos 🎁</h2>
+        <p class="muted" style="margin-top:0">Pon hasta ${MAX_WISHES} opciones de regalo con su precio aproximado. Tus compañeros elegirán una.</p>
+        <div id="budget-box"></div>
+        <form id="wish-form" style="display:flex;flex-direction:column;gap:12px;margin:18px 0 22px">
+          <div class="row">
+            <label class="field" style="flex:2">¿Qué te gustaría?<input id="w-title" maxlength="80" placeholder="Ej: Audífonos inalámbricos" required></label>
+            <label class="field">Precio aprox.<input id="w-price" type="number" min="0" step="0.01" placeholder="0" required></label>
+          </div>
+          <label class="field">Link de dónde comprarlo (opcional)<input id="w-link" type="url" placeholder="https://…"></label>
+          <label class="drop"><input type="file" id="w-file" accept="image/*" hidden><span id="w-prev">📷</span><span id="w-drop-t">Agregar una foto (opcional)</span></label>
+          <div class="err" id="w-err"></div>
+          <div><button class="btn coral" id="w-add">Agregar a mi lista</button></div>
+        </form>
+        <div id="my-wishes"></div>
+      </div>
+      <div class="card pad">
+        <h2 class="section-title">Mi torta 🎂</h2>
+        <p class="muted" style="margin-top:0">¿Qué torta te gustaría para tu cumpleaños?</p>
+        <form id="cake-form" style="display:flex;flex-direction:column;gap:12px">
+          <label class="field">Tipo<select id="c-type"><option value="">Elige una…</option>${CAKES.map(c => `<option>${c}</option>`).join('')}</select></label>
+          <label class="field">Detalles (sabor, relleno, decoración…)<textarea id="c-det" rows="3" maxlength="200" placeholder="Ej: con fresas, sin nueces"></textarea></label>
+          <label class="field">Precio aprox.<input id="c-price" type="number" min="0" step="0.01" placeholder="0"></label>
+          <div class="err" id="c-err"></div>
+          <div><button class="btn teal">Guardar torta</button></div>
+        </form>
+      </div>
+    </div>`;
+  const cf = $('#cake-form');
+  const fillCake = () => { const me = myPerson(); $('#c-type').value = me.cake?.type || ''; $('#c-det').value = me.cake?.details || ''; $('#c-price').value = me.cake?.price ?? ''; cf.dataset.filled = '1'; };
+  if (S.people[S.me]) fillCake();
+
+  $('#w-file').addEventListener('change', safe(async e => {
+    const f = e.target.files[0]; if (!f) return;
+    pendingImage = await fileToDataUrl(f);
+    $('#w-prev').innerHTML = `<img src="${pendingImage}" alt="">`; $('#w-drop-t').textContent = 'Foto lista · toca para cambiarla';
+  }));
+  $('#wish-form').addEventListener('submit', safe(async e => {
+    e.preventDefault(); const err = $('#w-err'); err.textContent = '';
+    const me = myPerson(); const wishes = me.wishes || [];
+    const title = $('#w-title').value.trim(), price = +$('#w-price').value, link = $('#w-link').value.trim();
+    const avail = availableFor(me);
+    if (!title) return err.textContent = 'Escribe qué te gustaría.';
+    if (!(price > 0)) return err.textContent = 'Pon un precio aproximado.';
+    if (price > avail) return err.textContent = `Se pasa del presupuesto: con tu torta, el regalo puede costar hasta ${money(avail)}.`;
+    if (wishes.length >= MAX_WISHES) return err.textContent = `Máximo ${MAX_WISHES} opciones.`;
+    if (link && !/^https?:\/\//i.test(link)) return err.textContent = 'El link debe empezar por https://';
+    await api.updateMe({ wishes: [...wishes, { id: uid(), title, price, link, image: pendingImage }] });
+    e.target.reset(); pendingImage = ''; $('#w-prev').textContent = '📷'; $('#w-drop-t').textContent = 'Agregar una foto (opcional)';
+    toast('Agregado a tu lista ✨');
+  }));
+  cf.addEventListener('submit', safe(async e => {
+    e.preventDefault(); const err = $('#c-err'); err.textContent = '';
+    const price = +$('#c-price').value || 0;
+    if (price > (+S.settings.budget || 0)) return err.textContent = `La torta no puede pasar el presupuesto (${money(S.settings.budget)}).`;
+    await api.updateMe({ cake: { type: $('#c-type').value, details: $('#c-det').value.trim(), price } });
+    toast('Torta guardada 🎂');
+  }));
+  $('#my-wishes').addEventListener('click', safe(async e => {
+    const b = e.target.closest('[data-del]'); if (!b) return;
+    await api.updateMe({ wishes: (myPerson().wishes || []).filter(w => w.id !== b.dataset.del) });
+  }));
+  refreshMyList();
+}
+function refreshMyList() {
+  const box = $('#my-wishes'); if (!box) return;
+  const me = myPerson();
+  const cf = $('#cake-form');
+  if (cf && !cf.dataset.filled && S.people[S.me]) { cf.dataset.filled = '1'; $('#c-type').value = me.cake?.type || ''; $('#c-det').value = me.cake?.details || ''; $('#c-price').value = me.cake?.price ?? ''; }
+  const wishes = me.wishes || [];
+  const max = +S.settings.budget || 0, min = Math.min(+S.settings.budgetMin || 0, max), cake = +me.cake?.price || 0, avail = availableFor(me);
+  const pct = v => max ? Math.max(0, Math.min(100, v / max * 100)) : 0;
+  const top = wishes.length ? Math.max(...wishes.map(w => +w.price || 0)) : 0;
+  $('#budget-box').innerHTML = `<div style="background:var(--bg);border-radius:16px;padding:14px 16px">
+    <div style="display:flex;justify-content:space-between;font-weight:700"><span>Torta + regalo</span><span>${min ? `${money(min)} – ` : 'hasta '}${money(max)}</span></div>
+    ${S.settings.cakeInBudget ? `
+      <div class="meter"><span class="ideal" style="left:${pct(min)}%;right:0"></span><i style="width:${pct(cake)}%"></i></div>
+      <div class="small muted">Tu torta (${money(cake)}) ya ocupa parte. Cada opción de regalo puede costar hasta <b style="color:var(--ink)">${money(Math.max(avail, 0))}</b>${min ? `; lo ideal es que torta + regalo quede entre <b style="color:var(--mint)">${money(min)}</b> y <b style="color:var(--mint)">${money(max)}</b>` : ''}.</div>
+      ${wishes.length && min && cake + top < min ? `<div class="small" style="margin-top:6px;color:#8A5A00">💡 Tu opción más cara + la torta suman ${money(cake + top)}: puedes pedir algo un poco más especial.</div>` : ''}`
+      : `<div class="small muted" style="margin-top:6px">Cada opción de regalo puede costar hasta <b style="color:var(--ink)">${money(max)}</b>. La torta va aparte.</div>`}
+  </div>`;
+  box.innerHTML = wishes.length ? `<div class="wishes">${wishes.map(w => wishCard(w, { over: +w.price > avail, actions: `<button class="btn danger sm" type="button" data-del="${esc(w.id)}">Eliminar</button>` })).join('')}</div>`
+    : '<div class="empty">Tu lista está vacía. ¡Agrega tu primera idea de regalo! 🎈</div>';
+  $('#w-add').disabled = wishes.length >= MAX_WISHES;
+}
+
+/* =====================================================================
+   ADMIN
+   ===================================================================== */
+let confirmDel = null, editingId = null;
+function buildAdmin() {
+  editingId = null;
+  $('#main').innerHTML = `
+    <div class="two">
+      <div style="display:flex;flex-direction:column;gap:24px">
+        <div class="card pad">
+          <h2 class="section-title">Solicitudes para entrar</h2>
+          <p class="muted small" style="margin-top:0">Cuando alguien crea su cuenta, elige su nombre de la lista. Aprueba solo si el email es de esa persona.</p>
+          <div id="claims"></div>
+        </div>
+        <div class="card pad">
+          <h2 class="section-title">Personas de ${esc(CONFIG.officeName)} <span class="pill gray" id="count"></span></h2>
+          <p class="muted small" style="margin:0 0 6px"><b>🎂 Club de la torta:</b> anotados por defecto a todas las tortas (menos la suya). <b>🎓 Pasante:</b> recibe regalo, pero no se anota a regalar.</p>
+          <form id="p-form" class="row" style="align-items:flex-end;margin:12px 0 16px">
+            <label class="field" style="flex:2">Nombre<input id="p-name" required maxlength="120"></label>
+            <label class="field">Cumpleaños (dd/mm)<input id="p-bday" placeholder="14/03" required></label>
+            <button class="btn" id="p-save">Agregar</button>
+            <button class="btn ghost hidden" type="button" id="p-cancel">Cancelar</button>
+          </form>
+          <div class="err" id="p-err" style="margin:-6px 0 10px"></div>
+          <div style="overflow:auto"><table><thead><tr><th>Nombre</th><th>Cumpleaños</th><th class="c">🎂 Club</th><th class="c">🎓 Pasante</th><th>Cuenta</th><th></th></tr></thead><tbody id="p-rows"></tbody></table></div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:24px">
+        <div class="card pad">
+          <h2 class="section-title">Presupuesto</h2>
+          <p class="muted small" style="margin-top:0">Torta + regalo de cada cumpleaños.</p>
+          <form id="s-form" style="display:flex;flex-direction:column;gap:12px;margin-top:10px">
+            <div class="row">
+              <label class="field">Ideal desde<input id="s-min" type="number" min="0" step="0.01"></label>
+              <label class="field">Máximo<input id="s-budget" type="number" min="1" step="0.01"></label>
+              <label class="field">Moneda<select id="s-cur"><option>USD</option><option>VES</option><option>EUR</option><option>COP</option></select></label>
+            </div>
+            <label style="display:flex;gap:8px;align-items:center;font-weight:500"><input type="checkbox" id="s-cake"> La torta entra dentro del presupuesto</label>
+            <div><button class="btn teal">Guardar</button></div>
+          </form>
+        </div>
+        <div class="card pad">
+          <h2 class="section-title">Importar lista</h2>
+          <p class="muted small" style="margin-top:0">Pega una persona por línea: <b>Nombre, dd/mm</b>. También sirve "14 de marzo" o pegar dos columnas copiadas de Excel. Si el nombre ya existe, se actualiza su fecha.</p>
+          <label class="field"><textarea id="imp" rows="6" placeholder="María Pérez, 14/03&#10;Juan López – 2 de julio"></textarea></label>
+          <div class="err" id="imp-err" style="margin:8px 0"></div>
+          <button class="btn coral" id="imp-btn">Importar</button>
+          ${api.mode === 'demo' ? '<hr style="border:0;border-top:1px solid var(--line);margin:20px 0"><button class="btn danger" id="reset">Reiniciar datos de demo</button>' : ''}
+        </div>
+      </div>
+    </div>`;
+  $('#s-min').value = S.settings.budgetMin; $('#s-budget').value = S.settings.budget; $('#s-cur').value = S.settings.currency; $('#s-cake').checked = !!S.settings.cakeInBudget;
+  $('#s-form').addEventListener('submit', safe(async e => {
+    e.preventDefault(); const b = +$('#s-budget').value, mn = +$('#s-min').value || 0;
+    if (!(b > 0)) return toast('Pon un máximo válido'); if (mn > b) return toast('El mínimo no puede ser mayor que el máximo');
+    await api.saveSettings({ budgetMin: mn, budget: b, currency: $('#s-cur').value, cakeInBudget: $('#s-cake').checked }); toast('Presupuesto guardado');
+  }));
+  const resetForm = () => { editingId = null; $('#p-form').reset(); $('#p-save').textContent = 'Agregar'; $('#p-cancel').classList.add('hidden'); };
+  $('#p-cancel').onclick = resetForm;
+  $('#p-form').addEventListener('submit', safe(async e => {
+    e.preventDefault(); const err = $('#p-err'); err.textContent = '';
+    const name = $('#p-name').value.trim(), birthday = parseDM($('#p-bday').value);
+    if (!birthday) return err.textContent = 'Fecha inválida. Usa dd/mm, por ejemplo 14/03.';
+    await api.adminSave({ id: editingId, name, birthday }); resetForm(); toast('Persona guardada');
+  }));
+  $('#p-rows').addEventListener('change', safe(async e => {
+    const cb = e.target.closest('[data-flag]'); if (!cb) return;
+    const p = S.people[cb.dataset.id]; const f = { cakeClub: p.cakeClub, intern: p.intern };
+    f[cb.dataset.flag] = cb.checked; if (f.intern) f.cakeClub = false;
+    cb.disabled = true; try { await api.adminFlags(p.id, f); } finally { cb.disabled = false; }
+  }));
+  $('#p-rows').addEventListener('click', safe(async e => {
+    const ed = e.target.closest('[data-edit]'), del = e.target.closest('[data-delp]'), un = e.target.closest('[data-unlink]');
+    if (ed) {
+      const p = S.people[ed.dataset.edit]; editingId = p.id; $('#p-name').value = p.name;
+      $('#p-bday').value = validBday(p.birthday) ? p.birthday.split('-').reverse().join('/') : '';
+      $('#p-save').textContent = 'Guardar cambios'; $('#p-cancel').classList.remove('hidden'); $('#p-name').focus();
+    }
+    if (un) { await api.adminUnlink(un.dataset.unlink); toast('Cuenta desvinculada: puede crear una nueva y volver a solicitar'); }
+    if (del) {
+      const id = del.dataset.delp;
+      if (confirmDel !== id) { confirmDel = id; refreshAdmin(); return; }
+      confirmDel = null; await api.adminDelete(id); toast('Persona eliminada');
+    }
+  }));
+  $('#claims').addEventListener('click', safe(async e => {
+    const a = e.target.closest('[data-approve]'), r = e.target.closest('[data-reject]');
+    if (a) { await api.adminApprove(a.dataset.approve); toast('Aprobada ✅'); }
+    if (r) { await api.adminReject(r.dataset.reject); toast('Solicitud rechazada'); }
+  }));
+  $('#imp-btn').addEventListener('click', safe(async () => {
+    const lines = $('#imp').value.split('\n').map(l => l.trim()).filter(Boolean);
+    const ok = [], bad = [];
+    lines.forEach((l, i) => { const p = parseLine(l); p ? ok.push(p) : bad.push(i + 1); });
+    $('#imp-err').textContent = bad.length ? `No entendí ${bad.length === 1 ? 'la línea' : 'las líneas'} ${bad.join(', ')} (¿le falta la fecha?).` : '';
+    if (!ok.length) return;
+    await api.adminImport(ok);
+    toast(`${ok.length} ${ok.length === 1 ? 'persona importada' : 'personas importadas'}`);
+    if (!bad.length) $('#imp').value = '';
+  }));
+  const r = $('#reset'); if (r) r.addEventListener('click', () => { api.reset(); startSession(); toast('Demo reiniciada'); });
+  refreshAdmin();
+}
+function refreshAdmin() {
+  const rows = $('#p-rows'); if (!rows) return;
+  const list = Object.values(S.people).sort((a, b) => a.name.localeCompare(b.name));
+  const linked = list.filter(p => p.linked).length, club = list.filter(p => p.cakeClub).length;
+  $('#count').textContent = `${list.length} · ${club} en el club · ${linked} con cuenta`;
+  rows.innerHTML = list.map(p => `<tr><td><div style="display:flex;gap:8px;align-items:center">${avatar(p)}${esc(p.name)}${p.id === S.me ? ' <span class="pill gold">tú</span>' : ''}</div></td>
+    <td>${validBday(p.birthday) ? fmtBday(p.birthday) : '<span class="err">Falta fecha</span>'}</td>
+    <td class="c"><input type="checkbox" data-flag="cakeClub" data-id="${esc(p.id)}" ${p.cakeClub ? 'checked' : ''} ${p.intern ? 'disabled' : ''} aria-label="Club de la torta"></td>
+    <td class="c"><input type="checkbox" data-flag="intern" data-id="${esc(p.id)}" ${p.intern ? 'checked' : ''} aria-label="Pasante"></td>
+    <td>${p.linked ? '<span class="status-ok">✓ Vinculada</span>' : '<span class="status-no">Sin cuenta</span>'}</td>
+    <td style="white-space:nowrap;text-align:right"><button class="btn ghost sm" data-edit="${esc(p.id)}">Editar</button>
+    ${p.linked && p.id !== S.me ? `<button class="btn ghost sm" data-unlink="${esc(p.id)}" title="Útil si olvidó su contraseña">Desvincular</button>` : ''}
+    ${p.id !== S.me ? `<button class="btn danger sm" data-delp="${esc(p.id)}">${confirmDel === p.id ? '¿Seguro?' : 'Eliminar'}</button>` : ''}</td></tr>`).join('')
+    || '<tr><td colspan="6" class="muted">No hay personas todavía. Impórtalas desde el panel de la derecha.</td></tr>';
+  $('#claims').innerHTML = S.claims.length ? `<div class="claims-list">${S.claims.map(c => {
+    const p = S.people[c.personId];
+    return `<div class="claim"><div class="txt"><b>${esc(c.email || 'Alguien')}</b> dice ser <b>${esc(p?.name || '¿?')}</b></div>
+      <button class="btn teal sm" data-approve="${esc(c.userId)}">Aprobar</button><button class="btn danger sm" data-reject="${esc(c.userId)}">Rechazar</button></div>`;
+  }).join('')}</div>` : `<div class="empty">No hay solicitudes pendientes.${api.mode === 'demo' ? ' (En la versión real aparecerán aquí.)' : ''}</div>`;
+}
+
+/* =====================================================================
+   ENTRADA (solo con Supabase): login, elegir nombre, esperar aprobación
+   ===================================================================== */
+const authCard = inner => `<div class="auth"><div class="card">
+  <div><span class="logo">${esc(CONFIG.officeName)}</span><div class="brand-sub" style="font-size:16px;margin-top:4px">Cumpleaños de la oficina 🎂</div></div>${inner}</div></div>`;
+let pollT = 0;
+function clearPoll() { clearInterval(pollT); pollT = 0; }
+
+function renderAuth(mode = 'login', msg = '') {
+  clearPoll();
+  $('#app').innerHTML = authCard(`
+    ${msg ? `<div class="pill teal" style="white-space:normal;padding:8px 12px">${esc(msg)}</div>` : ''}
+    <div class="tabs" style="margin:0"><button class="tab ${mode === 'login' ? 'on' : ''}" data-m="login">Entrar</button><button class="tab ${mode === 'signup' ? 'on' : ''}" data-m="signup">Crear cuenta</button></div>
+    <form id="auth-form" style="display:flex;flex-direction:column;gap:12px">
+      <label class="field">Email<input id="a-email" type="email" required autocomplete="email"></label>
+      <label class="field">Contraseña<input id="a-pass" type="password" required minlength="6" autocomplete="${mode === 'login' ? 'current-password' : 'new-password'}"></label>
+      <div class="err" id="a-err"></div>
+      <button class="btn coral" id="a-go">${mode === 'login' ? 'Entrar' : 'Crear mi cuenta'}</button>
+      <div class="small muted">${mode === 'login'
+        ? '¿Olvidaste tu contraseña? Pídele a la administradora que desvincule tu cuenta y crea una nueva.'
+        : 'Después de crear la cuenta vas a elegir tu nombre de la lista, y la administradora lo aprueba.'}</div>
+    </form>`);
+  $('#app').querySelectorAll('[data-m]').forEach(b => b.onclick = () => renderAuth(b.dataset.m));
+  $('#auth-form').addEventListener('submit', async e => {
+    e.preventDefault(); const email = $('#a-email').value.trim().toLowerCase(), password = $('#a-pass').value;
+    $('#a-err').textContent = ''; $('#a-go').disabled = true;
+    try {
+      if (mode === 'login') { const r = await SB.auth.signInWithPassword({ email, password }); if (r.error) throw r.error; }
+      else {
+        const r = await SB.auth.signUp({ email, password }); if (r.error) throw r.error;
+        if (!r.data.session) renderAuth('login', 'Cuenta creada. Si no puedes entrar, la administradora debe desactivar "Confirm email" en Supabase.');
+      }
+    } catch (er) { const el = $('#a-err'); if (el) el.textContent = errMsg(er); }
+    finally { const b = $('#a-go'); if (b) b.disabled = false; }
+  });
+}
+async function renderClaim() {
+  clearPoll();
+  $('#app').innerHTML = authCard('<div class="muted">Cargando lista…</div>');
+  const r = await SB.rpc('unclaimed_people');
+  if (r.error) return renderFatal(r.error);
+  $('#app').innerHTML = authCard(`
+    <h2>¿Quién eres? 👋</h2>
+    <p class="muted" style="margin:0">Busca tu nombre en la lista. La administradora va a confirmar que eres tú.</p>
+    <label class="field">Tu nombre<select id="cl-p"><option value="">Elige tu nombre…</option>${r.data.map(p => `<option value="${esc(p.id)}">${esc(p.name)}</option>`).join('')}</select></label>
+    <div class="err" id="cl-err"></div>
+    <button class="btn coral" id="cl-go">Soy yo</button>
+    <div class="small muted">¿No apareces? Pídele a la administradora que te agregue.</div>
+    <button class="linkbtn" id="cl-out" style="align-self:flex-start">Salir</button>`);
+  $('#cl-out').onclick = () => SB.auth.signOut();
+  $('#cl-go').onclick = async () => {
+    const pid = $('#cl-p').value; if (!pid) { $('#cl-err').textContent = 'Elige tu nombre.'; return; }
+    const ins = await SB.from('claims').insert({ person_id: pid });
+    if (ins.error) { $('#cl-err').textContent = errMsg(ins.error); return; }
+    checkStatus();
+  };
+}
+function renderWaiting(name) {
+  $('#app').innerHTML = authCard(`
+    <h2>Casi listo ⏳</h2>
+    <p class="muted" style="margin:0">Pediste entrar como <b>${esc(name || '')}</b>. Cuando la administradora lo apruebe, esta pantalla se abre sola.</p>
+    <button class="btn ghost" id="w-check">Revisar ahora</button>
+    <button class="linkbtn" id="w-cancel" style="align-self:flex-start">Me equivoqué de nombre</button>
+    <button class="linkbtn" id="w-out" style="align-self:flex-start">Salir</button>`);
+  $('#w-check').onclick = () => checkStatus();
+  $('#w-cancel').onclick = async () => { const { data } = await SB.auth.getUser(); await SB.from('claims').delete().eq('user_id', data.user.id); checkStatus(); };
+  $('#w-out').onclick = () => SB.auth.signOut();
+  clearPoll(); pollT = setInterval(() => checkStatus(true), 15000);
+}
+function renderFatal(e) {
+  clearPoll();
+  $('#app').innerHTML = authCard(`<h2>No se pudo conectar</h2><p class="muted">${esc(errMsg(e))}</p>
+    <p class="small muted">Si eres la administradora: revisa que corriste schema.sql en Supabase y que la URL y la clave en index.html son correctas.</p>
+    <button class="btn ghost" id="f-retry">Reintentar</button>`);
+  $('#f-retry').onclick = () => location.reload();
+}
+async function checkStatus(quiet = false) {
+  const r = await SB.rpc('my_status');
+  if (r.error) { if (!quiet) renderFatal(r.error); return; }
+  const st = r.data;
+  if (st.person_id) { clearPoll(); if (!api || api.me !== st.person_id) { api = makeSupabaseApi(st); startSession(); } return; }
+  if (st.claim_person_id) { if (!(quiet && pollT)) renderWaiting(st.claim_name); }   // si ya está esperando, sigue esperando
+  else renderClaim();
+}
+let curUser;
+function onSession(session) {
+  const u = session?.user?.id || null;
+  if (u === curUser) return; curUser = u;
+  stopSession(); api = null;
+  if (!u) { renderAuth(); return; }
+  checkStatus();
+}
+
+/* =====================================================================
+   ARRANQUE
+   ===================================================================== */
+(async function boot() {
+  if (!CONFIG.supabaseUrl) { api = makeDemoApi(); startSession(); return; }
+  $('#app').innerHTML = '<div class="auth"><div class="muted">Cargando…</div></div>';
+  try { await loadSupabase(); } catch (e) { return renderFatal(e); }
+  SB.auth.onAuthStateChange((ev, session) => { setTimeout(() => onSession(session), 0); });
+})();
+</script>
+</body>
+</html>
